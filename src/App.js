@@ -7,19 +7,27 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input = ''
+      input: '',
+      citySearched: ''
     }
   }
 
   onInputChange = (event) => {
     this.setState({ input: event.target.value })
+    console.log( this.state.input )
+  }
+
+  // Need to create an onButtonSubmit function for updating the citySearched state from the input
+  onButtonSubmit = () => {
+    this.setState({ citySearched: this.state.input })
+    console.log( this.state.input )
   }
 
   render() {
     return (
       <div className="App">
         <Navigation />
-        <LocationSeachForm onInput={this.onInputChange/>
+        <LocationSeachForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit} />
         {/*<WeatherTypeCard /> */}
       </div>
     );
