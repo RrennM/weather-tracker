@@ -9,8 +9,8 @@ const Navigation = () => {
                 <img src={logo} alt='Logo' />   
             </div>
                 <div className='navLinkContainer' style={{display: 'flex', justifyContent: 'flex-end'}}>
-                    <p className='f3 link dim black underline pa3 pointer'>Home</p>
-                    <p className='f3 link dim black underline pa3 pointer'>Sign In</p>
+                    <p className='f4 link dim black pa3 pointer'>Home</p>
+                    <p className='f4 link dim black pa3 pointer'>Sign In</p>
                 </div>
         </nav>
     )
